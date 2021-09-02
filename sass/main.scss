@@ -12,16 +12,135 @@ html {
 }
 
 body {
-  // font-family: 'Big Shoulders Display', cursive;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
-  color: $very-light-gray;
+  line-height: 1.7;
+  background-color: $very-light-gray;
+  color: #ffffff;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 4rem 0;
+    flex-direction: column;
+  }
+}
+
+.card {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+}
+
+.column {
+  padding: 2.5rem;
+  width: calc(60vw / 3);
+
+  @media only screen and (max-width: 68.125em) {
+    width: calc(80vw / 3);
+  }
+
+  @media only screen and (max-width: 50em) {
+    width: calc(90vw / 3);
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    width: 90vw;
+  }
+
+  &-orange {
+    background-color: $bright-orange;
+  }
+
+  &-cyan {
+    background-color: $dark-cyan;
+  }
+
+  &-dark {
+    background-color: $very-dark-cyan;
+  }
+}
+
+.heading {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+.paragraph {
+  color: $transparent-white;
+  margin-bottom: 5rem;
+
+  @media only screen and (max-width: 37.5em) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 24px;
+  background-color: #ffffff;
+  transition: ease 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba($very-light-gray, 0.3);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba($very-light-gray, 0.3);
+  }
+
+  &-orange {
+    color: $bright-orange;
+  }
+
+  &-cyan {
+    color: $dark-cyan;
+  }
+
+  &-dark {
+    color: $very-dark-cyan;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    &:hover,
+    &:active {
+      transform: none;
+      box-shadow: none;
+    }
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: $bright-orange;
+  position: absolute;
+  bottom: 50px;
+
+  @media only screen and (max-width: 74.375em) {
+    bottom: 30px;
+  }
+  @media only screen and (max-width: 43.75em) {
+    bottom: 15px;
+  }
+  @media only screen and (max-width: 37.5em) {
+    position: relative;
+    bottom: -10px;
+  }
 
   & a {
     color: hsl(228, 45%, 44%);
