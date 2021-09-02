@@ -91,16 +91,12 @@ body {
   padding: 0.7rem 1.5rem;
   border-radius: 24px;
   background-color: #ffffff;
-  transition: ease 0.2s;
+  border: 1px solid #ffffff;
+  transition: linear 0.2s;
 
   &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba($very-light-gray, 0.3);
-  }
-
-  &:active {
-    transform: scale(1);
-    box-shadow: 0 4px 8px rgba($very-light-gray, 0.3);
+    background-color: transparent;
+    color: currentColor;
   }
 
   &-orange {
@@ -113,14 +109,6 @@ body {
 
   &-dark {
     color: $very-dark-cyan;
-  }
-
-  @media only screen and (max-width: 37.5em) {
-    &:hover,
-    &:active {
-      transform: none;
-      box-shadow: none;
-    }
   }
 }
 
